@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 
 load_dotenv('naturalist.env')
 base_dir = os.getenv("BASE_DIRECTORY") # substitute this with your folder path
-scientific_name = "Gymnorhina tibicen" # serves as a unique identifier
+scientific_name = "Gymnorhina tibicen" # The Australian Magpie's scientific name, serves as a unique identifier
 request_url = f'https://api.inaturalist.org/v1/taxa?q={scientific_name}&rank=species' # rank=species added in to filter subspecies from response
 species_response = requests.get(request_url).json() # turns API output into indexable JSON
 # results is stored as a list in the response json to accommodate for multiple matches
